@@ -54,7 +54,7 @@ export async function POST(req) {
         }
 
         if (scheduleDate && scheduleTime) {
-          const localDate = new Date(`${scheduleDate}T${scheduleTime}:00`)
+          const localDate = new Date(`${scheduleDate}T${scheduleTime}:00+07:00`)
           const scheduledTime = Math.floor(localDate.getTime() / 1000)
           const now = Math.floor(Date.now() / 1000)
 
